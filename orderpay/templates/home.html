@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+<h2>Buy for $5.00</h2>
+<form action="{% url 'orderpay:charge'%}" method="POST">
+	{% csrf_token %}
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_UJpylN6QVgb1CkutBjo79Jfy"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Example charge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
+
+ 

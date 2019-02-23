@@ -1,0 +1,570 @@
+# Load your model to this variable
+import torch
+from torch import nn
+import torch.nn.functional as F
+from torchvision import models
+
+
+def load_checkpoint(checkpoint_path):
+    checkpoint = torch.load(checkpoint_path, map_location='cpu')
+
+    model = models.resnet152(pretrained=False)
+    for param in model.parameters():
+        param.requires_grad = False
+
+    # Put the classifier on the pretrained network
+    from collections import OrderedDict
+    classifier = nn.Sequential(OrderedDict([('fc1', nn.Linear(2048, 1024)),
+                          ('relu', nn.ReLU()),
+                          ('fc2', nn.Linear(1024, 102)),
+                          ('output', nn.LogSoftmax(dim=1))
+                          ]))
+    
+    model.fc = classifier
+
+    model.load_state_dict(checkpoint['state_dict'], strict = False)
+
+    return model
+
+
+model = load_checkpoint('/home/workspace/checkpoint.pth')
+
+
+  
+# If you used something other than 224x224 cropped images, set the correct size here
+image_size = 224
+# Values you used for normalizing the images. Default here are for 
+# pretrained models from torchvision.
+norm_mean = [0.485, 0.456, 0.406]
+norm_std = [0.229, 0.224, 0.225]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+{% block body %}
+<ul class="nav justify-content-end">
+      <li class="nav-item">
+        <form class="nav-link" action="{% url 'sendText:send_email' %}" method="post">
+                {%csrf_token%}
+                <button type="submit" class="btn btn-flat" style="padding:10px; text-align:center; word-spacing: 40px; width: 100px; background-color: #fff;">Email</button>
+              </form>
+      </li>
+      <li class="nav-item">
+        <form class="nav-link" action="{% url 'sendText:send_sms' %}" method="post">
+                {%csrf_token%}
+                <button type="submit" class="btn btn-flat" style="padding:10px; text-align:center; word-spacing: 40px; width: 100px; background-color: #fff;">Sms</button>
+              </form>
+      </li>
+
+      <li class="nav-item">
+        <form class="nav-link" action="{% url 'account:profile' %}" method="post">
+                {%csrf_token%}
+                <button type="submit" class="btn btn-flat" style="padding:10px; text-align:center; word-spacing: 40px; width: 100px; background-color: #e83e8c;">Profile</button>
+              </form>
+      </li>
+      <li class="nav-item">
+        <form class="nav-link" action="{% url 'account:logout' %}" method="post">
+                {%csrf_token%}
+                <button type="submit" class="btn btn-flat" style="padding:10px; text-align:center; word-spacing: 40px; width: 100px; background-color: #fff;">Logout</button>
+              </form>
+      </li>
+  </ul>
+
+
+<div class="container" >
+		<div class="space-20"></div>
+		        <center>
+		            <img src="{% static 'img/logo.png'%}" width="100px">
+		        </center>
+        <div class="space-20"></div>
+		<h1>Profile</h1>
+		<br>
+		<div style="font-size: 18px;">
+		<p>Username: {{ user }}</p>
+		<p>First name: {{user.first_name}}</p>
+		<p>Last name: {{user.last_name}}</p>
+		<p>Email: {{ user.email}}</p>
+		<p>Description: {{ user.userprofile.description }}</p>
+		<p>City: {{ user.userprofile.city }}</p>
+		<p>Location: {{ user.userprofile.location }}</p>
+		<p>Telephone: {{ user.userprofile.phone }}</p>
+		<p>Website: {{ user.userprofile.website }}</p>
+		<!-- <img src="{{ user.userprofile.image.url}}" width="80">
+		 -->
+
+
+
+
+
+
+Profile
+
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                           
+                        {% if user.profile.photo %}
+                            <img src="{{ user.profile.photo.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                            
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        {{user.first_name}}
+                                    </h5>
+                                    <h6>
+                                        Dawa Station Manager
+                                    </h6>
+                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>COMPANY LINK</p>
+                            <a href="">{{user.userprofile.website}}</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p>SKILLS</p>
+                            <a href="">Branches</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.last_name}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user.profile.phone }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>City</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user.profile.city }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Location</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user.profile.location }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Website</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ user.profile.website }}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Experience</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hourly Rate</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Projects</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                        <img src="" width="80">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+     
+
+
+
+
+
+
+DASHBOARD
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body style="background-color: #fff">
+  {% block content%}
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <img src="{% static 'img/logo.png'%}" width="100px">
+        <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a> -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'accounts:profile'%}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'accounts:logout'%}">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container">
+      <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        
+                <div class="row">
+                    <div class=" col-md-7 col-sm-12 " style="text-align:center; padding-top:10px;">
+                        <img src="{% static 'img/images133.jpg'%} " style="width:200px; height: 220">
+                        <h2 style="color:#1E62C0;font-family: 'Comfortaa', cursive; text-align:center "><a href="">Send Mail</a></h2>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-12 " style="text-align:center; padding-top:10px;">
+                        <img src="{% static 'img/images34.jpg'%} " style="width:200px;height:220px;">
+                        <h2 style="color:#1E62C0;font-family: 'Comfortaa', cursive;text-align:center "><a href="">Send Sms</a></h2>
+                    </div>
+
+                   </div>
+                   </div> 
+                </div>
+            </div>
+            <div class="footer ">
+                <div class="row ">
+                  <div class="col-lg-5 col-md-6 col-sm-12 ">
+                    </div>          
+                      <div class="col-lg-2 col-md-2 col-sm-12 " style="padding:22px;text-align: center; "> © 2018 365Server</div>
+                </div>
+            </div>
+                
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script type="text/javascript">
+      function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if regex.test(email){
+          document.getElementById('form').submit();
+        } else{
+          alert("Your email is incorrect!");
+        }
+      }
+    </script>
+    {% endblock%}
+  </body>
+</html>
+
+
+
+
+
+
+SIGNUP
+
+{% load static %}
+<head>
+     <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+{% block content %}
+
+<div class="container">
+    <div class="space-20"></div>
+        <center>
+            <img src="{% static 'img/logo.png'%}" width="100px">
+        </center>
+        <div class="space-20"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form action="{% url 'accounts:signup' %}" method="post">
+                        <h3 style="text-align:center; color:#000;font-family: 'Comfortaa', cursive;">Signup</h3>
+                         <div class="container">
+                        {% csrf_token %}
+                        {% for field in form %}
+                      <p>
+                        {{ field.label_tag }}<br>
+                        {{ field }}
+                        {% for error in field.errors %}
+                          <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                      </p>
+                        {% endfor %}
+                    <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary" style="text-align: center;">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                      </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p style="color: #212529; text-align: center;">Already User ? <a href="{% url 'accounts:login' %}" style="color: #212529;"><b>Login </b> </a></p>
+
+{% endblock %}
+</body>
+
+
+
+
+
+POST_LIST
+
+
+
+
+{% block content %}
+   {% for post in posts %}
+      <div class="post">
+          <div class="date">
+              {% csrf_token%}
+              <!-- {% if user.post.gallery %}
+                            <img src="{{ post.gallery.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %} -->
+              <img src="{{ post.gallery.url}}" width="200">
+          </div>
+              <h1><a href="{% url 'posts:detail'  %}">{{post.title }}</a></h1>
+        <!-- <p>{{ post.requirement|truncatewords:100}}</p> -->
+    </div>
+        <p>Title Of The Offer: {{ post.title }}</p>
+        <p>Select Category: {{ post.category }}</p>
+        <p>Select Sub Category: {{ post.sub_category }}</p>
+        <p>Price For This Offer: {{ post.price}}</p>
+        <p>Requirement: {{ post.requirement }}</p>
+    <p>Post By: {{ user }}</p>
+<!--        <p>Gallery: {{ post.gallery }}</p>
+ -->    
+ <br>
+ <div>
+    <a href="{% url 'posts:review'%}">Post Review</a>
+  </div>
+  <br><br>
+  {% endfor %}
+{% endblock %}
+
+{%load static%}
+
+
+
+
+
+
+
+
+
+                <form class="mamunurrashid_form" action="{% url 'techBusiness:create'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+              <div class="mr_group">
+              <label for="id_title">Title:</label><ul class="errorlist"></ul>
+              <input class="mr_select" type="text" name="title" maxlength="255" required id="id_title" placeholder="Write Your Title of The Offer..">
+            </div>
+            <div class="mr_group">
+              <label for="id_category">Category:</label><ul class="errorlist"></ul>                
+              <select class="mr_select" name="category" required id="id_category">
+                <option  value="" selected>---------</option>
+
+                <option value="11">Business</option>
+
+                <option value="1">Digital Marketing</option>
+
+                <option value="2">Content Marketing</option>
+
+                <option value="3">SEO</option>
+
+                <option value="12">Surveys</option>
+
+                <option value="9">Fun &amp; Lifestyle</option>
+
+                <option value="4">Graphic &amp; Design</option>
+
+                <option value="7">Music &amp; Audio</option>
+
+                <option value="10">Programming &amp; Tech</option>
+
+                <option value="6">Video &amp; Animation</option>
+
+                <option value="5">Writing &amp; Translation</option>
+
+              </select>
+            </div>
+            <div class="mr_group">
+              <label for="id_sub_category">Sub_category:</label><ul class="errorlist"></ul>
+              <input class="mr_select" type="text" name="sub_category" maxlength="200" required id="id_sub_category"></input>
+            </div>
+            <div class="mr_group">
+              <label for="id_credit">Credit:</label><td><ul class="errorlist"></ul>
+              <input class="mr_select" type="number" name="credit" step="0.01" required id="id_credit">
+            </td>
+          </div>
+            <div class="mr_group">
+              <label for="id_requirement">Requirement:</label><ul class="errorlist"></ul>
+              <textarea class="mr_textarea" class="content" name="requirement" cols="40" rows="10" required id="id_requirement" required="text" placeholder="Write Your Requirement of The Offer..">
+              </textarea>
+            </div>
+              <div class="mr_group">
+              <label for="id_slug">Slug:</label><ul class="errorlist"><li>
+              <input class="mr_select" type="text" name="slug" maxlength="250" required id="id_slug" placeholder="Ex: design">
+            </div>
+            <div class="mr_group">
+              <label for="id_gallery">Gallery:</label>
+              <input type="file" name="gallery" accept="image/*" id="id_gallery" required="image"></td></tr>
+            </div>
+              <div class="mr_form_btn">
+                  <button type="submit">Submit the Post</button>
+                </div>                
+              </form>

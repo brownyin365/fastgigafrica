@@ -1,0 +1,171 @@
+
+
+#postaoffer1{
+    padding: 100px 0px 100px;
+    background: #f5faff;;
+}
+#postaoffer2{
+    padding: 100px 0px 100px;
+    background: #f5faff;;
+}
+#postaoffer3{
+    padding: 100px 0px 100px;
+    background: #f5faff;;
+}
+#postaoffer4{
+    padding: 100px 0px 100px;
+    background: #f5faff;;
+}
+
+#mybreadcrumb .breadcrumb_menu .nav-item .nav-link span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #0e74e6;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.catagoris #mybreadcrumb .breadcrumb_menu .nav-link {
+    padding: 30px 40px;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group label{
+display: block;
+font-size: 22px;
+font-weight: 500;
+margin-bottom: 20px;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_textarea,
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_select{
+    width: 100%;
+    background: #f6fbff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border: 0px;
+    padding: 20px 15px;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_textarea:focus,
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_select:focus{
+outline: 0px;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_textarea::placeholder,
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_select{
+color: #a7a7a79d;
+font-size: 30px;
+font-weight: 500;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group{
+    margin-bottom: 40px;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_group .mr_textarea{
+    height:215px;
+    resize: none;
+    color: #707070;
+    font-size: 18px;
+    font-weight: 500;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_form_btn button{
+    background: #0e74e6;
+    border: 2px solid #0e74e6;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: .25rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+#postaoffer1 .form_area .mamunurrashid_form .mr_form_btn button:hover{
+    background: none;
+    border: 2px solid #0e74e6;
+    color: #0e74e6;
+}
+
+/* post a offer 2  Start*/
+
+#postaoffer2 .Editor_area h4{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#postaoffer2 .Editor_area .mr_btn button{
+    margin-top: 30px;
+    background: #0e74e6;
+    border: 2px solid #0e74e6;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+#postaoffer2 .Editor_area .mr_btn button:hover{
+    background: none;
+    border: 2px solid #0e74e6;
+    color: #0e74e6;
+}
+/* post a offer 3 Start */
+
+#postaoffer3 .gate_img h4{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#postaoffer3 .gate_img .mr_btn button
+{
+    margin-top: 30px;
+    background: #0e74e6;
+    border: 2px solid #0e74e6;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+#postaoffer3 .gate_img .mr_btn button:hover{
+    background: none;
+    border: 2px solid #0e74e6;
+    color: #0e74e6;
+}
+/* post a offer 4 Start */
+#postaoffer4 .publish h4{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#postaoffer4 .publish .mr_btn button
+{
+    margin-top: 20px;
+    background: #0e74e6;
+    border: 2px solid #0e74e6;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+#postaoffer4 .publish .mr_btn button:hover{
+    background: none;
+    border: 2px solid #0e74e6;
+    color: #0e74e6;
+}
+#postaoffer4 .box span{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+#postaoffer4  .box p{
+    font-size: 14px;
+    font-weight: 400;
+}
+#postaoffer4 .box{
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    padding: 30px 15px;
+    margin-bottom: 30px;
+}
+.form-check {
+    padding-left: 0rem;
+}

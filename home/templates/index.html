@@ -1,0 +1,664 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zxx">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Raxio - Micro Freelancing Marketplace</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="{% static 'img/fav.jpg'%}" type="image/x-icon">
+	<!--Google Font-->
+<!-- 	<link href="{% url 'home:https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+ -->	
+ <link href="{% static 'css/googleapis.css' %}" rel="stylesheet">
+ <!--Bootstrap Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<!-- Animate Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<!--Font Awesome Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+	<!--Owl Carousel Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+	<!--Slick Slider Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
+	<!--Veno Box Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/venobox.css' %}">
+	<!--Main Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+	<!--Responsive Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.min.css' %}">
+
+</head>
+
+<body class="body-class indexpage">
+	<!--Start Preloader-->
+	<div class="site-preloader">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	<!--End Preloader-->
+
+	<!--Start Body Wrap-->
+	<div id="body-wrap">
+		<div id="main-menu">
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="{% url 'home:index'%}">
+						<img src="{% static 'img/logo.png' %}" alt="">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'home:#banner">How Its Work</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'home:#about">About Us</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="{% url 'home:#" id="navbarDropdownpage" role="button" data-toggle="dropdown"
+								 aria-haspopup="true" aria-expanded="false">
+									Post Job
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownpage">
+									<a class="dropdown-item" href="#">Programming & Tech</a>
+									<a class="dropdown-item" href="{% url 'graphicdesign:create' %}">Graphic & Design</a>
+									<a class="dropdown-item" href="{% url 'digitalmarket:create' %}">Digital Marketing</a>
+									<a class="dropdown-item" href="{% url 'techbusiness:create' %}">Tech Business</a>
+									<a class="dropdown-item" href="{% url 'videoanimation:create' %}">Animation & Wrting</a>							
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'accounts:login'%}">Sign in</a>
+							</li>
+						</ul>
+						<a class="mamunur_rashid_top_book_btn" href="{% url 'accounts:signup'%}">Join Now</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- =========== nav end =========== -->
+
+		<!-- =========== Banner Area Start end =========== -->
+		<section id="banner" style="background: url('/static/img/banner/banner4.png') no-repeat right">
+			<div class="container">
+				<div class="row justify-content-lg-center justify-content-xl-start">
+					<div class="col-lg-8 col-xl-6 p-relative">
+						<div class="header-content">
+							<h1>World’s most Important place for People</h1>
+							<p>But I must explain to you how all this mistaken idea of hedenouncing pleasure and praising pain was born give
+								you a complete account.</p>
+							<form class="form-inline">
+								<input class="mr-form-control" type="search" placeholder="Search" aria-label="Search">
+								<button class="mr-btn-serch" type="submit"><i class="fa fa-search"></i></button>
+							</form>
+							<div class="video d-flex  justify-content-center justify-content-xl-start">
+								<a class="venobox" data-vbtype="video" data-autoplay="true" href="https://www.youtube.com/watch?v=j9kKzRmZc8M"><i
+									 class="fa fa-play"></i></a>
+								<p class="align-self-center">Know About More</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- =========== Banner Area end =========== -->
+
+
+		<!-- =========== About Us Start ============= -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 left-text-class">
+						<h2><span>Raxio</span> The World Top Micro Job Platfrom In This Current Time.</h2>
+						<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+							by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
+							that
+							are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is
+							the same.</p>
+						<a href="{% url 'accounts:signup'%}">Join With Us</a>
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="box box1 wow fadeInUp" data-wow-delay=".4s">
+									<div class="img">
+										<img src="{% static 'img/bag-icon.png'%}" alt="">
+										<span>15000+</span>
+										<h4>Active Job</h4>
+										<p>But I must explain to you how all this mistaken idea you</p>
+									</div>
+								</div>
+								<div class="box box2 wow fadeInUp" data-wow-delay=".8s">
+									<div class="img">
+										<img src="{% static 'img/bag-icon.png' %}" alt="">
+										<span>12000+</span>
+										<h4>Active Worker</h4>
+										<p>But I must explain to you how all this mistaken idea you</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="box box3  wow fadeInUp" data-wow-delay=".6s">
+									<div class="img">
+										<img src="{% static 'img/bag-icon.png'%}" alt="">
+										<span>10000+</span>
+										<h4>Active Buyer</h4>
+										<p>But I must explain to you how all this mistaken idea you</p>
+									</div>
+								</div>
+								<div class="box box4  wow fadeInUp" data-wow-delay="1s">
+									<div class="img">
+										<img src="{% static 'img/bag-icon.png'%}" alt="">
+										<span>29000+</span>
+										<h4>Complete Job</h4>
+										<p>But I must explain to you how all this mistaken idea you</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =========== About Us End ============= -->
+
+		<!--======= Explore The Catagories Start ========== -->
+		<section id="catagories">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-10 text-center">
+						<h2 class="section-title">Explore The Catagories</h2>
+						<p class="section-text">On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay=".4s">
+							<h3>Tech & Business</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'techbusiness:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay=".6s">
+							<h3>Digital Marketing</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'digitalmarket:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay=".8s">
+							<h3>Writing & Education</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'techbusiness:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay="1s">
+							<h3>Video & Animation</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'videoanimation:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay="1.2s">
+							<h3>Graphic Design</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'graphicdesign:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="c-box text-center wow fadeInUp" data-wow-delay="1.4s">
+							<h3>Home Nursing</h3>
+							<span class="bar"></span>
+							<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
+							<a href="{% url 'techbusiness:list'%}">See More <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--======= Explore The Catagories End ========== -->
+
+		<!-- ======= Whay People Like Us Area Start ========= -->
+
+		<section id="w_like_us">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-10 text-center">
+						<h2 class="section-title">Why People Like Us</h2>
+						<p class="section-text">On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<div class="wl-box wl-box-1 wow fadeInUp" data-wow-delay=".4s">
+									<h3>Best Payment</h3>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="wl-box wl-box-2 wow fadeInUp" data-wow-delay=".6s">
+									<h3>Good Workspace</h3>
+								</div>
+								<div class="wl-box wl-box-3 wow fadeInUp" data-wow-delay=".8s">
+									<h3>Mony Gurantee</h3>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="wl-box wl-box-4 wow fadeInUp" data-wow-delay="1s">
+									<h3>27/7 Support</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 right-text-content">
+						<h2>
+							We Always Try to make one
+							Best One Platform
+						</h2>
+						<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+							by the charms of pleasure of the moment, so blinded by desire, that they cannot forese.</p>
+						<a href="{% url 'techbusiness:list'%}">Browsr Job</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ======= Whay People Like Us Area End ========= -->
+
+
+		<!-- ======= Guidelines Area Start ========= -->
+		<section id="guidelines">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-10 text-center">
+						<h2 class="section-title">Raxio Guidelines</h2>
+						<p class="section-text">On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="g-box g-box1 text-center">
+							<h5>Find People</h5>
+							<p>On the other hand, we denounce with righteous indignation</p>
+							<div class="g-icon-wraper">
+								<div class="g-icon d-flex justify-content-center wow fadeInUp" data-wow-delay=".4s">
+									<img class="align-self-center" src="{%static 'img/guidline/g1.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="g-box g-box2 text-center">
+							<div class="g-icon-wraper">
+								<div class="g-icon d-flex justify-content-center wow fadeInUp" data-wow-delay=".6s">
+									<img class="align-self-center" src="{% static 'img/guidline/g2.png'%}" alt="">
+								</div>
+							</div>
+							<h5>Find People</h5>
+							<p>On the other hand, we denounce with righteous indignation</p>
+
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="g-box g-box3 text-center">
+							<h5>Find People</h5>
+							<p>On the other hand, we denounce with righteous indignation</p>
+							<div class="g-icon-wraper">
+								<div class="g-icon d-flex justify-content-center wow fadeInUp" data-wow-delay=".8s">
+									<img class="align-self-center" src="{%static 'img/guidline/g3.png'%}" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="g-box g-box4 text-center">
+							<div class="g-icon-wraper">
+								<div class="g-icon d-flex justify-content-center wow fadeInUp" data-wow-delay="1s">
+									<img class="align-self-center" src="{% static 'img/guidline/g4.png'%}" alt="">
+								</div>
+							</div>
+							<h5>Find People</h5>
+							<p>On the other hand, we denounce with righteous indignation</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ======= Guidlines Area End ========= -->
+
+		<!-- =======  Invite Area Start ========= -->
+		<section id="invite">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-6 col-lg-8 col-md-10 text-center">
+						<h2>Start by inviting friends and get Awesome Gifts</h2>
+						<p>On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+						<a href="{% url 'home:#">Invite Frind</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =======  Invite Area End ========= -->
+
+		<!-- ======= Clint FeedBack Area Start =========== -->
+		<section id="feedback">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-10 text-center">
+						<h2 class="section-title">Some Feedback</h2>
+						<p class="section-text">On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-lg-3">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+							<a class="nav-link clint active" id="clint-tab" data-toggle="pill" href="{% url 'home:#clint" role="tab" aria-controls="clint"
+							 aria-selected="true">
+								<h4>Client<br> Feedback</h4>
+
+							</a>
+							<a class="nav-link worker" id="worker-tab" data-toggle="pill" href="{% url 'home:#worker" role="tab" aria-controls="worker"
+							 aria-selected="false">
+
+								<h4>Worker<br> Feedback</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-9">
+						<div class="tab-content" id="v-pills-tabContent">
+							<div class="tab-pane fade show active" id="clint" role="tabpanel" aria-labelledby="clint-tab">
+								<div class="row">
+									<div class="col-12">
+										<div class="feedback-slider owl-carousel owl-theme">
+											<div class="item">
+												<div class="media">
+													<img class="img-fluid mr-30" src="{% static 'img/feedback/feedback1.jpg' %}" alt="">
+													<div class="media-body align-self-center">
+														<div class="reviewr-text align-self-center">
+															<h3>Sohili Khan Mirja</h3>
+															<h5>CEO & Founder</h5>
+															<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+																deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+																provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="media">
+													<img class="img-fluid mr-30" src="{% static 'img/feedback/feedback1.jpg' %}" alt="">
+													<div class="media-body align-self-center">
+														<div class="reviewr-text align-self-center">
+															<h3>Neha Kakar</h3>
+															<h5>CEO & Founder</h5>
+															<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+																deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+																provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="worker" role="tabpanel" aria-labelledby="worker-tab">
+								<div class="row">
+									<div class="col-12">
+										<div class="feedback-slider owl-carousel owl-theme">
+											<div class="item">
+												<div class="media">
+													<img class="img-fluid mr-30" src="{% static 'img/feedback/feedback1.jpg'%}" alt="">
+													<div class="media-body align-self-center">
+														<div class="reviewr-text align-self-center">
+															<h3>Sohili Khan Mirja</h3>
+															<h5>CEO & Founder</h5>
+															<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+																deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+																provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="media">
+													<img class="img-fluid mr-30" src="{% static 'img/feedback/feedback1.jpg' %}" alt="">
+													<div class="media-body align-self-center">
+														<div class="reviewr-text align-self-center">
+															<h3>Neha Kakar</h3>
+															<h5>CEO & Founder</h5>
+															<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+																deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+																provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ======= Clint FeedBack Area End =========== -->
+
+		<!-- ========= Our Patner Area Start ============= -->
+		<section id="patner">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 col-md-10 text-center">
+						<h2 class="section-title">Some Feedback</h2>
+						<p class="section-text">On the other hand, we denounce with righteous indignation and dislike men who are so
+							beguiled and demoralized</p>
+					</div>
+				</div>
+				<div class="row justify-content-center patnet_logo">
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".4s" src="{% static 'img/p1.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".5s" src="{% static 'img/p2.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".6s" src="{%static 'img/p3.png' %}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".7s" src="{%static 'img/p1.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".8s" src="{% static 'img/p2.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay=".9s" src="{%static 'img/p3.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay="1s" src="{%static 'img/p1.png' %}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay="1.1s" src="{%static 'img/p2.png'%}" alt=""></a>
+					</div>
+					<div class="col-lg-2 col-md-3 col-4">
+						<a href="#"><img class="img-fluid wow fadeInUp" data-wow-delay="1.2s" src="{% static 'img/p3.png'%}" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========= Our Patner Area End ============= -->
+
+
+		<!-- ========= Footer Section Start =========== -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center footer-logo">
+						<img src="{%static 'img/whitelogo.png' %}" alt=""><br>
+						<span class="f-bar"></span>
+					</div>
+				</div>
+				<div class="row f-links">
+					<div class="col-lg-3 col-6">
+						<h3>Quick Info</h3>
+						<ul>
+							<li>
+								<a href="{% url 'home:tel:+8812345678">+88 012 345 678</a>
+							</li>
+							<li>
+								<a href="{% url 'home:mailto:support@rixio.com">support@rixio.com</a>
+							</li>
+							<li>
+								<a href="{% url 'home:mailto:info@rixio.com">info@rixio.com</a>
+							</li>
+							<li>
+								<p>
+									Khan Jahan Ali Road, Khulna, Bangladesh.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-6">
+						<h3>About Us</h3>
+						<ul>
+							<li>
+								<a href="{% url 'home:#">Careers</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Press & Newes</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Partnerships</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Terms of Service</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-6">
+						<h3 class="f-40">Supports</h3>
+						<ul>
+							<li>
+								<a href="{% url 'home:#">Contact Support</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Help & Education</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Trust & Safety</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Selling on Raxio</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Buying on Raxio</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-6">
+						<h3 class="f-40">Social Activity</h3>
+						<ul>
+							<li>
+								<a href="{% url 'home:#">Facebook</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Twitter</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Linkedin</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Youtube</a>
+							</li>
+							<li>
+								<a href="{% url 'home:#">Google Plus</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<p>2018 | All Right Reserved<span></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ========= Footer Section Start =========== -->
+
+		<!--Start ClickToTop-->
+		<div class="totop">
+			<a href="#top"><i class="fa fa-arrow-up"></i></a>
+		</div>
+		<!--End ClickToTop-->
+	</div>
+	<!--End Body Wrap-->
+	<!--jQuery JS-->
+	<script src="{%static 'js/jquery.2.1.2.min.js'%}"></script>
+	<!--Bootstrap JS-->
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+	<!--Wow JS-->
+	<script src="{%static 'js/wow.min.js'%}"></script>
+	<!--Owl Carousel JS-->
+	<script src="{%static 'js/owl.carousel.min.js' %}"></script>
+	<!--Venobox JS-->
+	<script src="{%static 'js/venobox.min.js'%}"></script>
+	<!--Slick Slider JS-->
+	<script src="{% static 'js/slick.min.js'%}"></script>
+	<!--Main-->
+	<script src="{% static 'js/custom.js'%}"></script>
+
+</body>
+
+</html>
+
+<!-- 
+Project             : Raxio - Micro Freelancing Marketplace.
+Version             : 1.0
+Author              : Thesoftking
+Front-end developer : Mamunur Rashid
+ -->

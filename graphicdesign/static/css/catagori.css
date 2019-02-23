@@ -1,0 +1,236 @@
+
+#main-menu .navbar {
+  background: #fff;
+}
+#main-menu .nav-link{
+  color: #707070;
+}
+.mamunur_rashid_top_book_btn {
+  background: #1088eb;
+  color: #fff;
+}
+.catagoris #mybreadcrumb{
+  background-image: url('/static/img/catagories/catagoribreadcrumb.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.catagoris #mybreadcrumb .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 115, 230, 0.7);
+}
+.catagoris #mybreadcrumb .title_area{
+  padding: 205px 0px 130px;
+  text-align: center
+}
+.catagoris #mybreadcrumb .title_area h1{
+  font-size: 48px;
+  color: #fff;
+}
+.catagoris #mybreadcrumb .title_area p{
+  color: #fff;
+  margin-top: 25px;
+}
+.catagoris #mybreadcrumb .breadcrumb_menu .nav-link{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 30px 20px;
+  color: #707070;
+  position: relative;
+}
+.catagoris #mybreadcrumb .breadcrumb_menu .nav-link:hover,
+.catagoris #mybreadcrumb .breadcrumb_menu .nav-item.active .nav-link
+{
+  color: #707070;
+}
+.catagoris #mybreadcrumb .breadcrumb_menu .nav-item.active .nav-link::before{
+  position: absolute;
+  content: " ";
+  height: 6px;
+  width: 70%;
+  background: #1088eb;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.catagoris #mybreadcrumb .breadcrumb_menu .navbar{
+  padding: 0px 15px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* ============================================
+catagoris body content area start
+============================================== */
+.catagoris #catagoribody{
+  padding: 100px 0px 100px;
+  background: #f5faff;;
+}
+.catagoris #catagoribody .mr_aside{
+  background: #fff;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+}
+.catagoris #catagoribody .mr_aside h3{
+  background: #1088eb;
+  color: #fff;
+  padding: 30px 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.catagoris #catagoribody .mr_aside ul li a{
+  color: #707070;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+}
+.catagoris #catagoribody .mr_aside ul li a.active::before{
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: #1088eb;
+  z-index: 99;
+}
+.catagoris #catagoribody  .filter .range{
+  background: #fff;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 15px 20px;
+}
+.catagoris #catagoribody  .filter p{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.catagoris #catagoribody  .filter .mr-price{
+  width: 70px;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #707070;
+  display: inline-block;
+}
+.catagoris #catagoribody  .filter .mr-price:focus{
+  outline: 0px;
+}
+.catagoris #catagoribody  .filter .mr-price_btn{
+  background: #1088eb;
+  border: 0px;
+  color: #fff;
+  padding: 1px 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+.catagoris #catagoribody  .filter .best-filter{
+  background: #fff;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+  padding: 35px 15px 22px;
+}
+.catagoris #catagoribody  .filter .best-filter p{
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 10px;
+}
+.catagoris #catagoribody  .filter .best-filter form{
+  display: inline-block;
+}
+.catagoris #catagoribody  .filter .best-filter .mr_select{
+  border: 0px;
+  font-size: 18px;
+  color: #707070;
+}
+.catagoris #catagoribody  .filter .best-filter .mr_select:focus{
+  outline: 0px;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper{
+  margin-top: 40px;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card {
+  margin-bottom: 30px;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_img img{
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_img {
+  overflow: hidden;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card:hover .mr_img img{
+transform: scale(1.1) rotate(3deg);
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body {
+  background: #ecf6ff;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body .price{
+  margin: 0px 30px;
+  position: relative;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body .price a p{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #707070;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body .price span{
+  font-size: 22px;
+  font-weight: 600;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body .price .p-box{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  position: absolute;
+  top: -30px;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body  .title{
+  padding: 57px 15px 32px;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body  .title .p{
+ font-size: 17px;
+ font-weight: 500;
+ width: 60%;
+ color: #707070;
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body  .title .sr{
+ font-size: 16px;
+ font-weight: 500;
+ text-align: centerl
+}
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body  .title span i{
+color: #e9be0b;
+}
+
+.catagoris #catagoribody .mamunurrashid_gig_wraper .mr_card .mr_card_body  .title .review{
+display: block;
+font-size: 16px;
+}
+.catagoris #catagoribody .paginationsarea  .page-item .page-link{
+  background: #ecf6ff;
+  border: 0px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 26px;
+  margin: 0px 5px;
+  color: #707070;
+  border: 1px solid #ffffff00;
+  font-size: 17px;
+  font-weight: 500;
+}
+.catagoris #catagoribody .paginationsarea  .page-item .page-link:hover{
+  border: 1px solid #0d73e6;
+  background: #0d73e6;
+  color: #fff;
+}

@@ -1,0 +1,212 @@
+ #jobdetails{
+  padding: 100px 0px 100px;
+  background: #f5faff;;
+}
+#jobdetails .aside_box .title_box .img .img-shape{
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+#jobdetails .aside_box .title_box .img .img-shape span{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #07fc2f;
+  right: 16px;
+  top: 16px;
+}
+#jobdetails .aside_box .title_box .img img{
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+}
+#jobdetails .aside_box .name h4{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+#jobdetails .aside_box .designation p{
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+#jobdetails .aside_box .hr{
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-top: 37px;
+  margin-bottom: 27px;
+}
+#jobdetails .aside_box .hr::before{
+  position: absolute;
+  content: " ";
+  top: 0;
+  width: 80%;
+  height: 1px;
+  background: #dedede;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#jobdetails .aside_box .adderss ul li{
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 40px;
+}
+#jobdetails .aside_box .about_profile p{
+  font-size: 17px;
+}
+#jobdetails .aside_box .about_profile a{
+  color: #707070;
+}
+#jobdetails .aside_box .title_box{
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px 15px;
+}
+
+#jobdetails .gig_details .gig_img{
+  border: 7px solid #e2f2ff;
+}
+#jobdetails .gig_details .gig_title{
+  margin-top: 40px;
+}
+#jobdetails .gig_details .gig_title a{
+width: 70%;
+color: #707070;
+}
+
+#jobdetails .gig_details .hr{
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-top: 37px;
+  margin-bottom: 27px;
+}
+#jobdetails .gig_details .hr::before{
+  position: absolute;
+  content: " ";
+  top: 0;
+  width: 80%;
+  height: 1px;
+  background: #dedede;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#jobdetails .gig_details .stars,
+#jobdetails .gig_details .sr,
+#jobdetails .gig_details .review
+{
+  text-align: center;
+}
+#jobdetails .gig_details .review{
+  font-size: 16px;
+  font-weight: 500;
+}
+#jobdetails .gig_details .stars i{
+  color: #ecbf0b;
+}
+#jobdetails .gig_details .gig_description h5{
+  margin-bottom: 25px;
+}
+#jobdetails .gig_details .gig_description .list{
+  margin: 30px 0px 30px;
+}
+#jobdetails .gig_details .gig_description .list li p{
+  line-height: 30px;
+  font-size: 16px;
+}
+#jobdetails .gig_details .gig_description .list i{
+  margin-right: 10px;
+  color:#1088eb;
+  font-size: 12px;
+
+}
+#jobdetails .orderand_share{
+margin-top: 40px;
+display: block;
+}
+#jobdetails .orderand_share .order_btn{
+  background: #1088eb;
+  padding: 15px 35px;
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: .25rem;
+  border: 2px solid #1088eb;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+#jobdetails .orderand_share .order_btn:hover{
+  background: none;
+  color: #1088eb;
+  border: 2px solid #1088eb;
+}
+#jobdetails .orderand_share .socal_link,
+#jobdetails .orderand_share p
+{
+  display: inline-block;
+}
+#jobdetails .orderand_share .socal_link{
+  margin-left: 40px;
+  background: #fff;
+  padding: 18px 35px;
+  border-radius: .25rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+}
+#jobdetails .orderand_share .socal_link p,
+#jobdetails .orderand_share a i{
+  display: inline-block;
+  color: #707070;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#jobdetails .orderand_share a i{
+  margin: 0px 7px;
+}
+#jobdetails .clint_review{
+  background: #fff;
+  border: 2px solid #cbe6fb;
+  padding: 40px 30px;
+  margin-top: 50px;
+}
+#jobdetails .clint_review .top_content h4{
+  font-size: 20px;
+  font-weight: 500;
+}
+#jobdetails .clint_review .top_content a{
+  font-size: 15px;
+  font-weight: 500;
+  color: #707070;
+}
+#jobdetails .clint_review .media h4{
+  font-size: 18px;
+  font-weight: 500;
+  color: #707070;
+}
+#jobdetails .clint_review .media .header i{
+  font-size: 14px;
+  color: #ecbf0b;
+}
+#jobdetails .clint_review .review_box{
+  margin: 25px 0px 0px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid  #e6e6e6;
+}
+#jobdetails .clint_review .review_box:last-child{
+  border: 0px;
+}
+#jobdetails .clint_review .review_box .p{
+  font-weight: 500;
+  margin: 7px 0px 7px;
+}

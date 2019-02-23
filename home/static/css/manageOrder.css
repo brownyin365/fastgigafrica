@@ -1,0 +1,115 @@
+#manageorder{
+  padding: 100px 0px 70px;
+}
+#manageorder .mr_card {
+  margin-bottom: 30px;
+}
+#manageorder .mr_card .mr_card_body {
+  background: #ecf6ff;
+}
+#manageorder .mr_card .mr_card_body .price{
+  margin: 0px 30px;
+  position: relative;
+}
+#manageorder .mr_card .mr_card_body .price a p{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #707070;
+}
+#manageorder .mr_card .mr_card_body .price span{
+  font-size: 22px;
+  font-weight: 600;
+}
+#manageorder .mr_card .mr_card_body .price .p-box{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 30px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  position: absolute;
+  top: -30px;
+}
+#manageorder .mr_card .mr_card_body  .title{
+  padding: 57px 15px 32px;
+  box-shadow: 0px 0px 30px  rgba(0, 0, 0, 0.05);
+}
+#manageorder .mr_card .mr_card_body  .title a{
+  color: #707070;
+}
+#manageorder.mr_card .mr_card_body  .title .p{
+ font-size: 17px;
+ font-weight: 500;
+ width: 60%;
+ color: #707070;
+}
+#manageorder .mr_card .mr_card_body  .title .sr{
+ font-size: 16px;
+ font-weight: 500;
+ text-align: centerl
+}
+#manageorder .mr_card .mr_card_body  .title span i{
+color: #e9be0b;
+}
+
+#manageorder .mr_card .mr_card_body  .title .review{
+display: block;
+font-size: 16px;
+}
+
+#manageorder .order_area .top_box .box{
+  text-align: center;
+  background: #f6fbff;
+  margin-bottom: 30px;
+  padding: 80px 14px;
+  box-shadow: 0px 0px 30px  rgba(0, 0, 0, 0.05);
+  border: 7px solid #fff;
+}
+#manageorder .order_area .top_box .box h4{
+  margin-bottom: 15px;
+}
+#manageorder .order_area .top_box .box h2{
+  color: #0d73e6;
+}
+#manageorder .activeorder_box h5{
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+#manageorder .mr-box .area1 a{
+  color:#707070;
+}
+#manageorder .mr-box .area1 p,
+#manageorder .mr-box .area2 p,
+#manageorder .mr-box .area3 p,
+#manageorder .mr-box .area1 span,
+#manageorder .mr-box .area1 a i
+{
+  font-size: 14px;
+}
+#manageorder .mr-box .area1 p,
+#manageorder .mr-box .area1 span{
+  font-weight: 700;
+}
+#manageorder .mr-box .area1 a i{
+  color: #c4c4c4;
+}
+#manageorder .mr-box .area2 span{
+  font-weight: 700;
+}
+#manageorder .mr-box .area2 {
+  margin: 7px 0px 8px;
+}
+#manageorder .mr-box{
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+#manageorder .mr-box:last-child{
+  border-bottom: 0px;
+}
+#manageorder .activeorder_box{
+ background: #f6fbff;
+ padding: 30px 30px;
+ padding-bottom: 0px;
+ margin-bottom: 0px;
+}
